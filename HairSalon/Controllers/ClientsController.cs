@@ -24,10 +24,10 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    public ActionResult Create()
+    public ActionResult Create(int? defaultStylistId)
     {
       List<Stylist> stylists = _db.Stylists.ToList();
-      ViewBag.StylistId = new SelectList(stylists, "StylistId", "Name");
+      ViewBag.StylistId = new SelectList(stylists, "StylistId", "Name", defaultStylistId);
       ViewBag.NoStylistsBool = (stylists.Count == 0) ? true : false;
       return View();
     }
