@@ -1,0 +1,13 @@
+/* NAVIGATION BAR */
+#navbar {
+  font-size: large;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+.display-list a:hover {
+  text-decoration: underline;
+}
