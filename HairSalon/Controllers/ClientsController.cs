@@ -24,10 +24,10 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
-    // ! Does this need to be in Stylist controller?
     public ActionResult Create(int? defaultStylistId)
     {
       List<Stylist> stylists = _db.Stylists.ToList();
+      // if adding a Client from a Stylist's page, set the default selection to that Stylist
       ViewBag.StylistId = new SelectList(stylists, "StylistId", "Name", defaultStylistId);
       ViewBag.NoStylistsBool = (stylists.Count == 0) ? true : false;
       return View();
