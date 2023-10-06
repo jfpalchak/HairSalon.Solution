@@ -23,10 +23,11 @@
 else
 {
   <div class="display-list container">
+    <h3>Current Clients:</h3>
     <ul>
       @foreach(Client client in Model.Clients)
       {
-        <li><h4>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</h4></li>
+        <li><h4>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</h4></li>
       }
     </ul>
   </div>
