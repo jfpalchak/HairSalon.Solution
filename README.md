@@ -46,14 +46,14 @@ $ git clone https://github.com/jfpalchak/HairSalon.Solution.git
     }
    ```
 7. Next, make sure to update the connection string with your own system's values for `[USERNAME]` and `[PASSWORD]`! Don't forget to replace the brackets `[]` as well.
-8. In the command line, run the following command to compile and run web application in development mode with a watcher:
+8. In the command line, run the following command to compile and run the web application in development mode with a watcher:
    
 ```bash
 $ dotnet watch run
 ```
 > Optionally, you can run `dotnet build` to compile this web app without running it.
 
-9. Open the browser to https://localhost:5001 to use the web application. 
+9. Open your browser to https://localhost:5001 to navigate and use the web application. 
 > If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS.
 
 
