@@ -5,13 +5,15 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Client;
 
-<div class="header container">
-  <h1>Add a New Client</h1>
+<div class="header">
+  <div class="container">
+    <h1>Add a New Client</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
-
-@await Html.PartialAsync("NavBar")
-
-<br/>
 
 @if(ViewBag.NoStylistsBool)
 {
@@ -43,4 +45,5 @@ else
 
 <div class="links container">
   <p>@Html.ActionLink("Back to Clients", "Index")</p>
+  <p>@Html.ActionLink("Back to Stylists", "Index", "Stylists")</p>
 </div>

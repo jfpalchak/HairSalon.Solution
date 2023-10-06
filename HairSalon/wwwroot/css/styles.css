@@ -40,3 +40,22 @@ a {
 .display-list a:hover {
   text-decoration: underline;
 }
+
+/* SPLASH PAGE */
+.splash-links {
+  text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 770px) {
+  .left, .right {
+    text-align: center;
+    width: 90%;
+  }
+
+  .display-list, ul {
+    margin-top: 20px;
+    list-style: none;
+    padding-left: 30px;
+  }
+}

@@ -4,13 +4,15 @@
 
 @model HairSalon.Models.Client;
 
-<div class="header container">
-  <h1>Remove Client</h1>
+<div class="header">
+  <div class="container">
+    <h1>Remove Client</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
-
-@await Html.PartialAsync("NavBar")
-
-<br/>
 
 <div class="banner container">
   <h2>Are you sure you want to remove this client?</h2>

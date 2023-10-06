@@ -32,8 +32,8 @@ else
     <div class="row container">
       <div class="col left">
         <div class="links container">
-          <h4>@Html.ActionLink("Add a New Stylist", "Create")</h4>
-          <h4>@Html.ActionLink("Add a Client", "Create", "Clients")</h4>
+          <h3>@Html.ActionLink("Add a New Stylist", "Create")</h3>
+          <h3>@Html.ActionLink("Add a Client", "Create", "Clients")</h3>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ else
           <ul>
             @foreach(Stylist stylist in Model)
             {
-              <li><h3>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</h3></li>
+              <li><h2>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</h2></li>
             }
           </ul>
         </div>
