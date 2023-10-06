@@ -46,18 +46,27 @@ a {
   text-align: center;
 }
 
-/* RESPONSIVE DESIGN */
-@media screen and (max-width: 770px) {
-  .left, .right {
-    text-align: center;
-    width: 90%;
-  }
+/* LIST DISPLAYS */
+.right {
+  background-color: #424242;
+  border-radius: 8px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
 
-  .display-list, ul {
-    margin-top: 20px;
-    list-style: none;
-    padding-left: 30px;
-  }
+.empty {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.display-list li {
+  padding-top: 30px;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
 }
 
 /* CREATE FORMS */
@@ -69,4 +78,26 @@ label {
 select {
   height: 32px;
   width: 186px
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 770px) {
+  .left, .right {
+    text-align: center;
+    width: 95%;
+  }
+
+  .left {
+    padding-left: 38px;
+  }
+
+  .right {
+    margin-left: 24px;
+  }
+
+  .display-list, ul {
+    margin-top: 20px;
+    list-style: none;
+  }
+
 }

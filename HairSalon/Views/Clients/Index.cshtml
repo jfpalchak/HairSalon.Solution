@@ -30,12 +30,15 @@ else
         </div>
       </div>
 
-      <div class="col-8 right">
+      <div class="col-7 right">
         <div class="display-list container">
           <ul>
             @foreach(Client client in Model)
             {
-              <li><h2>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</h2></li>
+              <li>
+                <h2>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })</h2>
+                Stylist: @client.Stylist.Name
+              </li>
             }
           </ul>
         </div>
