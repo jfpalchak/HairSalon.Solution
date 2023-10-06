@@ -2,13 +2,14 @@
   Layout = "_Layout";
 }
 
+@using HairSalon.Models;
 @model HairSalon.Models.Client;
 
 <div class="header container">
   <h1>Add a New Client</h1>
 </div>
 
-@* @if(ViewBag?.StylistId == null)
+@if(ViewBag.Stylists.Count == 0)
 {
   <div class="empty container">
     <h3>There are no stylists available to book a client!</h3>
@@ -17,7 +18,7 @@
   </div>
 }
 else
-{ *@
+{
   <div class="form container">
     @using (Html.BeginForm())
     {
@@ -31,7 +32,7 @@ else
       <input type="submit" value="Submit" class="btn btn-primary" />
     }
   </div>
-@* } *@
+}
 
 <br/>
 
