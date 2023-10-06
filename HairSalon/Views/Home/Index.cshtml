@@ -1,13 +1,15 @@
 @{
   Layout = "_Layout";
 }
-<div class="header container">
-  <h1>Welcome to Eau Claire's Salon!</h1>
+<div class="header">
+  <div class="container">
+    <h1>Welcome, Claire!</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
-
-@await Html.PartialAsync("NavBar")
-
-<hr/>
 
 <div class="links container">
   <h4>@Html.ActionLink("View Stylists", "Index", "Stylists")</h4>

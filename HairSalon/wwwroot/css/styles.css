@@ -1,6 +1,35 @@
+/* GENERAL */
+body {
+  background-color: #303030;
+  color: #FFFFFF;
+}
+
 /* NAVIGATION BAR */
-#navbar {
+#navbar ul{
   font-size: large;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #424242;
+  border-radius: 8px;
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar a {
+  padding: 8px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  background-color: #4c4c4c;
 }
 
 /* LINKS */

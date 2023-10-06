@@ -1,5 +1,11 @@
 <div id="navbar" class="container">
-  @Html.ActionLink("Home", "Index", "Home") |
+
+  <ul id="navlist">
+    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <li>@Html.ActionLink("Stylists", "Index", "Stylists")</li>
+    <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+  </ul>
+  @* @Html.ActionLink("Home", "Index", "Home") |
   @Html.ActionLink("Stylists", "Index", "Stylists") |
-  @Html.ActionLink("Clients", "Index", "Clients")
+  @Html.ActionLink("Clients", "Index", "Clients") *@
 </div>
