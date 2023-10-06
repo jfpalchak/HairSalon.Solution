@@ -14,7 +14,7 @@
 <hr/>
 
 <div class="details container">
-  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) (#@Model.ClientId)</h4>
+  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) (# @Model.ClientId)</h4>
   <h4>@Html.DisplayNameFor(model => model.Stylist): @Html.ActionLink($"{Model.Stylist.Name}", "Details", "Stylists", new { id = Model.StylistId })</h4>
 </div>
 
@@ -22,6 +22,4 @@
 
 <div class="links container">
   <p>@Html.ActionLink("Back to Clients", "Index")</p>
-  <p>@Html.ActionLink("View Stylists", "Index", "Stylists")</p>
-  <p>@Html.ActionLink("Home Page", "Index", "Home")</p>
 </div>
