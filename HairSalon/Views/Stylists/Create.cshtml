@@ -4,30 +4,39 @@
 
 @model HairSalon.Models.Stylist;
 
-<div class="header container">
-  <h1>Add a New Stylist</h1>
+<div class="header">
+  <div class="container">
+    <h1>Add a New Stylist</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="form container">
+        @using (Html.BeginForm())
+        {
+          @Html.LabelFor(model => model.Name)
+          <br/>
+          @Html.TextBoxFor(model => model.Name)
+          <br/>
+          @Html.LabelFor(model => model.Specialty)
+          <br/>
+          @Html.TextBoxFor(model => model.Specialty)
+          <br/>
+          <br/>
+          <input type="submit" style="Submit" class="btn btn-primary" />
+        }
+      </div>
 
-@await Html.PartialAsync("NavBar")
+      <br/>
 
-<br/>
-
-<div class="form container">
-  @using (Html.BeginForm())
-  {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-    <br/>
-    @Html.LabelFor(model => model.Specialty)
-    @Html.TextBoxFor(model => model.Specialty)
-    <br/>
-    <br/>
-    <input type="submit" style="Submit" class="btn btn-primary" />
-  }
-</div>
-
-<br/>
-
-<div class="links container">
-  <p>@Html.ActionLink("Back to Stylists", "Index")</p>
+      <div class="links container">
+        <p>@Html.ActionLink("Back to Stylists", "Index")</p>
+      </div>
+    </div>
+  </div>
 </div>

@@ -5,41 +5,58 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
-<div class="header container">
-  <h1>Stylist Details</h1>
+<div class="header">
+  <div class="container">
+    <h1>Stylist Details</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
 
-@await Html.PartialAsync("NavBar")
+<div class="container">
+  <div class="row container">
+    <div class="col left">
+      <div class="details container">
+        <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
+        <h4>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h4>
+      </div>
 
-<br/>
+      <br/>
 
-<div class="details container">
-  <h4>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h4>
-  <h4>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h4>
+      <div class="links container">
+        <h4>@Html.ActionLink("Add a Client", "Create", "Clients", new { defaultStylistId = Model.StylistId })</h4>
+        <h5>@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId })</h5>
+      </div>
+
+    </div>
+
+    <div class="col-7 right">
+    @if (Model.Clients.Count == 0)
+    {
+      <div class="empty container">
+        <h3>@Model.Name currently has no clients.</h3>
+      </div>
+    }
+    else
+    {
+      <div class="display-list container">
+        <h4>Current Clients:</h4>
+        <ul>
+          @foreach(Client client in Model.Clients)
+          {
+            <li><h4>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</h4></li>
+          }
+        </ul>
+      </div>
+    }
+    </div>
+  </div>
 </div>
-
-@if (Model.Clients.Count == 0)
-{
-  <div class="empty container">
-    <h3>@Model.Name currently has no clients.</h3>
-  </div>
-}
-else
-{
-  <div class="display-list container">
-    <h3>Current Clients:</h3>
-    <ul>
-      @foreach(Client client in Model.Clients)
-      {
-        <li><h4>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</h4></li>
-      }
-    </ul>
-  </div>
-}
-
-<br/>
+@* <br/>
 
 <div class="links container">
   <h4>@Html.ActionLink("Add a Client", "Create", "Clients", new { defaultStylistId = Model.StylistId })</h4>
   <h5>@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId })</h5>
-</div>
+</div> *@

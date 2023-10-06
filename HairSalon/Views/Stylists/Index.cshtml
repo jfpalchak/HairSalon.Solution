@@ -4,38 +4,50 @@
 
 @using HairSalon.Models;
 
-<div class="header container">
-  <h1>Available Stylists</h1>
+<div class="header">
+  <div class="container">
+    <h1>Available Stylists</h1>
+  </div>
+
+  @await Html.PartialAsync("NavBar")
+
+  <br/>
 </div>
-
-@await Html.PartialAsync("NavBar")
-
-<br/>
 
 @if (Model.Count == 0)
 {
   <div class="empty container">
     <h3>The Salon currently has no stylists.</h3>
   </div>
+
+  <br/>
+
+  <div class="links container">
+    <h4>@Html.ActionLink("Add a New Stylist", "Create")</h4>
+  </div>
 }
 else
 {
-  <div class="display-list container">
-    <ul>
-      @foreach(Stylist stylist in Model)
-      {
-        <li><h4>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</h4></li>
-      }
-    </ul>
+  <div class="container">
+    <div class="row container">
+      <div class="col left">
+        <div class="links container">
+          <h4>@Html.ActionLink("Add a New Stylist", "Create")</h4>
+          <h4>@Html.ActionLink("Add a Client", "Create", "Clients")</h4>
+        </div>
+      </div>
+
+
+      <div class="col-8 right">
+        <div class="display-list container">
+          <ul>
+            @foreach(Stylist stylist in Model)
+            {
+              <li><h3>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</h3></li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 }
-
-<br/>
-
-<div class="links container">
-  <h4>@Html.ActionLink("Add a New Stylist", "Create")</h4>
-  @if(Model.Count > 0)
-  {
-    <h4>@Html.ActionLink("Add a Client", "Create", "Clients")</h4>
-  }
-</div>
