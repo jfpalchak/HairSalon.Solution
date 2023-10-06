@@ -24,6 +24,7 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
+    // ! Does this need to be in Stylist controller?
     public ActionResult Create(int? defaultStylistId)
     {
       List<Stylist> stylists = _db.Stylists.ToList();
