@@ -8,6 +8,8 @@
   <h1>Add a New Stylist</h1>
 </div>
 
+@await Html.PartialAsync("NavBar")
+
 <hr/>
 
 <div class="form container">
@@ -28,5 +30,4 @@
 
 <div class="links container">
   <p>@Html.ActionLink("Back to Stylists", "Index")</p>
-  <p>@Html.ActionLink("Home Page", "Index", "Home")</p>
 </div>

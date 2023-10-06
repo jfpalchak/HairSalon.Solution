@@ -9,6 +9,8 @@
   <h1>Stylist Details</h1>
 </div>
 
+@await Html.PartialAsync("NavBar")
+
 <hr/>
 
 <div class="details container">
@@ -38,7 +40,5 @@ else
 <br/>
 
 <div class="links container">
-  <p>@Html.ActionLink("Add a Client", "Create", "Clients", new { defaultStylistId = Model.StylistId })</p>
-  <p>@Html.ActionLink("Back to Stylists", "Index")</p>
-  <p>@Html.ActionLink("Home Page", "Index", "Home")</p>
+  <h4>@Html.ActionLink("Add a Client", "Create", "Clients", new { defaultStylistId = Model.StylistId })</h4>
 </div>

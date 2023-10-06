@@ -9,6 +9,8 @@
   <h1>Add a New Client</h1>
 </div>
 
+@await Html.PartialAsync("NavBar")
+
 <hr/>
 
 @if(ViewBag.NoStylistsBool)
@@ -31,6 +33,7 @@ else
       @* <br/> *@
       @Html.DropDownList("StylistId")
       <br/>
+      <br/>
       <input type="submit" value="Submit" class="btn btn-primary" />
     }
   </div>
@@ -40,6 +43,4 @@ else
 
 <div class="links container">
   <p>@Html.ActionLink("Back to Clients", "Index")</p>
-  <p>@Html.ActionLink("View Stylists", "Index", "Stylists")</p>
-  <p>@Html.ActionLink("Home Page", "Index", "Home")</p>
 </div>
