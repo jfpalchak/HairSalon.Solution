@@ -25,25 +25,33 @@
 }
 else
 {
-  <div class="form container">
-    @using (Html.BeginForm())
-    {
-      @Html.LabelFor(model => model.Name)
-      @Html.TextBoxFor(model => model.Name)
-      <br/>
-      @Html.LabelFor(model => model.Stylist)
-      @* <br/> *@
-      @Html.DropDownList("StylistId")
-      <br/>
-      <br/>
-      <input type="submit" value="Submit" class="btn btn-primary" />
-    }
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="form container">
+          @using (Html.BeginForm())
+          {
+            @Html.LabelFor(model => model.Name)
+            <br/>
+            @Html.TextBoxFor(model => model.Name)
+            <br/>
+            @Html.LabelFor(model => model.Stylist)
+            <br/>
+            @Html.DropDownList("StylistId")
+            <br/>
+            <br/>
+            <input type="submit" value="Submit" class="btn btn-primary" />
+          }
+        </div>
+
+        <br/>
+
+        <div class="links container">
+          <h4>@Html.ActionLink("Back to Clients", "Index")</h4>
+          <h4>@Html.ActionLink("Back to Stylists", "Index", "Stylists")</h4>
+        </div>
+      </div>
+    </div>
   </div>
+
 }
-
-<br/>
-
-<div class="links container">
-  <p>@Html.ActionLink("Back to Clients", "Index")</p>
-  <p>@Html.ActionLink("Back to Stylists", "Index", "Stylists")</p>
-</div>

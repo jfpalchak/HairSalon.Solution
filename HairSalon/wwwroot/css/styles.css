@@ -59,3 +59,14 @@ a {
     padding-left: 30px;
   }
 }
+
+/* CREATE FORMS */
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+select {
+  height: 32px;
+  width: 186px
+}
