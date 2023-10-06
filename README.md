@@ -20,12 +20,14 @@
 ## Setup/Installation Requirements
 
 #### Install Tools
-This project assumes you have MySQL Server and MySQL Workbench installed on your system. If necessary, follow along with the installation steps for the tools introduced in these series of lessons on [LearnHowToProgram](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
+This project assumes you have MySQL Server and MySQL Workbench installed on your system. _If you do not have these tools installed_, follow along with the installation steps for the the necessary tools introduced in the series of lessons found here on [LearnHowToProgram](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
 
 #### Set Up the Database
-To set up a new database to run with this application, follow the instructions in this [LearnHowToProgram Lesson](https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench). You'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a new database in MySQL Workbench with the name `joey_palchak`.
+To set up a new database to run with this application, follow the instructions in this [LearnHowToProgram Lesson](https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench). You'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a replicate database in MySQL Workbench with the name `joey_palchak`.
 
 #### Install and Run the Project
+
+Assuming you've completed the required steps above:
 
 1. Copy the **[URL](https://github.com/jfpalchak/HairSalon.Solution.git)** provided for this repository.
 2. Open Terminal.
