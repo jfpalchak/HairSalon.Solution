@@ -15,7 +15,23 @@
 
 ## Description
 
-{DESCRIPTION}
+This is a simple website for a fictional hair salon, where a user can add Stylists to the site's database, as well as add Clients for a specific Stylist at the Salon. Users can view a list of all available Stylists, as well as view a list of Clients for a specific Stylist, or for the Salon as a whole.
+
+You can find a diagram representing the project's schema below:
+<img src="https://github.com/jfpalchak/HairSalon.Solution/blob/assets/salon-schema-draw.png" />
+
+A list of all available routes to navigate the website:
+```
+https://localhost:5001/
+https://localhost:5001/Stylists
+https://localhost:5001/Stylists/Create
+https://localhost:5001/Stylists/Details/{id}
+https://localhost:5001/Stylists/Delete/{id}
+https://localhost:5001/Clients
+https://localhost:5001/Clients/Create
+https://localhost:5001/Clients/Details/{id}
+https://localhost:5001/Clients/Delete/{id}
+```
 
 ## Setup/Installation Requirements
 
