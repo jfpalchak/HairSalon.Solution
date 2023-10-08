@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models;
+@model HairSalon.Models.Stylist;
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <h3>Edit Stylist: @Model.Name</h3>
+        <div class="form container">
+          @using (Html.BeginForm())
+          {
+            @Html.HiddenFor(model => model.StylistId)
+
+            @Html.LabelFor(model => model.Name)
+            <br/>
+            @Html.EditorFor(model => model.Name)
+            <br/>
+            @Html.LabelFor(model => model.Specialty)
+            <br/>
+            @Html.EditorFor(model => model.Specialty)
+            <br/>
+            <br/>
+            <input type="submit" value="Save" class="btn btn-success" />
+          }
+      </div>
+
+      <br/>
+
+      <div class="links container">
+        <h4>@Html.ActionLink("Back to Stylist", "Details", new { id = Model.StylistId })</h4>
+      </div>
+    </div>
+  </div>
+</div>
