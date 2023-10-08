@@ -6,6 +6,7 @@
 @model HairSalon.Models.Client;
 
 <div class="details container">
+  <h2>Client</h2>
   <h2>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) (# @Model.ClientId)</h2>
   <h2>@Html.DisplayNameFor(model => model.Stylist): @Html.ActionLink($"{Model.Stylist.Name}", "Details", "Stylists", new { id = Model.StylistId })</h2>
 </div>
