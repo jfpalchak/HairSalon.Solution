@@ -18,11 +18,13 @@ namespace HairSalon.Controllers
     public ActionResult Index()
     {
       List<Stylist> model = _db.Stylists.ToList();
+      ViewBag.HeaderPath = " > Stylists";
       return View(model);
     }
 
     public ActionResult Create()
     {
+      ViewBag.HeaderPath = " > Stylists > Create";
       return View();
     }
 
@@ -39,12 +41,14 @@ namespace HairSalon.Controllers
       Stylist thisStylist = _db.Stylists
                                 .Include(stylist => stylist.Clients)
                                 .FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.HeaderPath = $" > Stylists > {thisStylist.Name}";
       return View(thisStylist);
     }
 
     public ActionResult Delete(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.HeaderPath = $" > Stylists > {thisStylist.Name} > Delete";
       return View(thisStylist);
     }
 

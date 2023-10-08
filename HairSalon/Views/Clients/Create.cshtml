@@ -5,21 +5,11 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Client;
 
-<div class="header">
-  <div class="container">
-    <h1>Add a New Client</h1>
-  </div>
-
-  @await Html.PartialAsync("NavBar")
-
-  <br/>
-</div>
-
 @if(ViewBag.NoStylistsBool)
 {
   <div class="empty container">
     <h3>There are no stylists available to book a client!</h3>
-    <p><strong>NOTE:</strong>There must be at least one stylist in the Salon before you can book a client.</p>
+    <p><strong>NOTE:</strong> There must be at least one stylist in the Salon before you can book a client.</p>
     <h4>@Html.ActionLink("Add a Stylist", "Create", "Stylists")</h4>
   </div>
 }
@@ -33,7 +23,7 @@ else
           {
             @Html.LabelFor(model => model.Name)
             <br/>
-            @Html.TextBoxFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new { required = "required" })
             <br/>
             @Html.LabelFor(model => model.Stylist)
             <br/>

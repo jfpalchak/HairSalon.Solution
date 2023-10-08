@@ -4,16 +4,6 @@
 
 @using HairSalon.Models;
 
-<div class="header">
-  <div class="container">
-    <h1>Available Stylists</h1>
-  </div>
-
-  @await Html.PartialAsync("NavBar")
-
-  <br/>
-</div>
-
 @if (Model.Count == 0)
 {
   <div class="empty container">
@@ -22,7 +12,7 @@
 
   <br/>
 
-  <div class="links container">
+  <div class="necessary container">
     <h4>@Html.ActionLink("Add a New Stylist", "Create")</h4>
   </div>
 }
@@ -33,7 +23,6 @@ else
       <div class="col left">
         <div class="links container">
           <h3>@Html.ActionLink("Add a New Stylist", "Create")</h3>
-          <h3>@Html.ActionLink("Add a Client", "Create", "Clients")</h3>
         </div>
       </div>
 

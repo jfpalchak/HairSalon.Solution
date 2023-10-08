@@ -5,16 +5,6 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
-<div class="header">
-  <div class="container">
-    <h1>Stylist Details</h1>
-  </div>
-
-  @await Html.PartialAsync("NavBar")
-
-  <br/>
-</div>
-
 <div class="container">
   <div class="row container">
     <div class="col left">
@@ -26,11 +16,8 @@
       <br/>
 
       <div class="links container">
-        <h4>@Html.ActionLink("Add a Client", "Create", "Clients", new { defaultStylistId = Model.StylistId })</h4>
-        @if(Model.Clients.Count == 0)
-        {
-          <h5>@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId })</h5>
-        }
+        <h4>@Html.ActionLink("Add a Client", "Create", "Clients", new { id = Model.StylistId })</h4>
+        <h5>@Html.ActionLink("Remove Stylist", "Delete", new { id = Model.StylistId })</h5>
       </div>
 
     </div>

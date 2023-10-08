@@ -1,7 +1,14 @@
-<div id="navbar" class="container">
-  <ul id="navlist">
-    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-    <li>@Html.ActionLink("Stylists", "Index", "Stylists")</li>
-    <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
-  </ul>
+<div class="header">
+  <div class="header container">
+    <h1>Eau Claire's Salon</h1>
+    <h4>@ViewBag.HeaderPath</h4>
+  </div>
+  <div id="navbar" class="container">
+    <ul id="navlist">
+      <li>@Html.ActionLink("Home", "Index", "Home")</li>
+      <li>@Html.ActionLink("Stylists", "Index", "Stylists")</li>
+      <li>@Html.ActionLink("Clients", "Index", "Clients")</li>
+    </ul>
+  </div>
 </div>
+<br/>

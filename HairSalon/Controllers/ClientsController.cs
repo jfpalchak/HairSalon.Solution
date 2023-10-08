@@ -21,15 +21,17 @@ namespace HairSalon.Controllers
       List<Client> model = _db.Clients
                               .Include(client => client.Stylist)
                               .ToList();
+      ViewBag.HeaderPath = " > Clients";
       return View(model);
     }
 
-    public ActionResult Create(int? defaultStylistId)
+    public ActionResult Create(int? id)
     {
       List<Stylist> stylists = _db.Stylists.ToList();
       // if adding a Client from a Stylist's page, set the default selection to that Stylist
-      ViewBag.StylistId = new SelectList(stylists, "StylistId", "Name", defaultStylistId);
+      ViewBag.StylistId = new SelectList(stylists, "StylistId", "Name", id);
       ViewBag.NoStylistsBool = (stylists.Count == 0) ? true : false;
+      ViewBag.HeaderPath = " > Clients > Create";
       return View();
     }
 
@@ -46,12 +48,14 @@ namespace HairSalon.Controllers
       Client thisClient = _db.Clients
                               .Include(client => client.Stylist)
                               .FirstOrDefault(client => client.ClientId == id);
+      ViewBag.HeaderPath = $" > Clients > {thisClient.Name}";
       return View(thisClient);
     }
 
     public ActionResult Delete(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(client => client.ClientId == id);
+      ViewBag.HeaderPath = $" > Clients > {thisClient.Name} > Delete";
       return View(thisClient);
     }
 

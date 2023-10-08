@@ -4,6 +4,32 @@ body {
   color: #FFFFFF;
 }
 
+ul {
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+select {
+  height: 32px;
+  width: 186px
+}
+
+/* HEADER */
+.header h1, .header h4 {
+  display: inline-block;
+  text-align: center;
+}
+
 /* NAVIGATION BAR */
 #navbar ul{
   font-size: large;
@@ -32,13 +58,8 @@ body {
   background-color: #4c4c4c;
 }
 
-/* LINKS */
-a {
-  text-decoration: none;
-}
-
-.display-list a:hover {
-  text-decoration: underline;
+.header {
+  display: block;
 }
 
 /* SPLASH PAGE */
@@ -63,21 +84,12 @@ a {
   padding-top: 30px;
 }
 
-ul {
+.display-list a:hover {
+  text-decoration: underline;
+}
+
+.necessary {
   text-align: center;
-  list-style: none;
-  padding-left: 0;
-}
-
-/* CREATE FORMS */
-label {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-select {
-  height: 32px;
-  width: 186px
 }
 
 /* RESPONSIVE DESIGN */
@@ -99,5 +111,4 @@ select {
     margin-top: 20px;
     list-style: none;
   }
-
 }
