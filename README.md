@@ -26,10 +26,10 @@ You can find a diagram representing the project's schema below:
 ## Setup/Installation Requirements
 
 #### Install Tools
-This project assumes you have MySQL Server and MySQL Workbench installed on your system. _If you do not have these tools installed_, follow along with the installation steps for the the necessary tools introduced in the series of lessons found here on [LearnHowToProgram](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
+This project assumes you have MySQL Server and MySQL Workbench installed on your system. _If you do not have these tools installed_, follow along with the installation steps for the the necessary tools introduced in the series of lessons found here on [LearnHowToProgram](https://full-time.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql).
 
 #### Set Up the Database
-To set up a new database to run with this application, follow the instructions in this [LearnHowToProgram Lesson](https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench). You'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a replicate database in MySQL Workbench with the name `joey_palchak`.
+To set up a new database to run with this application, follow the instructions in this [LearnHowToProgram Lesson](https://full-time.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench). You'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a replicate database in MySQL Workbench with the name `joey_palchak`.
 
 #### Install and Run the Project
 
