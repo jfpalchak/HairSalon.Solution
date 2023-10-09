@@ -26,6 +26,14 @@ else
             <br/>
             @Html.TextBoxFor(model => model.Name, new { required = "required" })
             <br/>
+            @Html.LabelFor(model => model.Email)
+            <br/>
+            @Html.TextBoxFor(model => model.Email, new { type = "email" })
+            <br/>
+            @Html.LabelFor(model => model.Phone)
+            <br/>
+            @Html.TextBoxFor(model => model.Phone, new { type = "tel" })
+            <br/>
             @Html.LabelFor(model => model.Stylist)
             <br/>
             @Html.DropDownList("StylistId")

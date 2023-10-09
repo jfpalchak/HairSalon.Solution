@@ -9,6 +9,10 @@
   <h2>Client</h2>
   <h2>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name) (# @Model.ClientId)</h2>
   <h2>@Html.DisplayNameFor(model => model.Stylist): @Html.ActionLink($"{Model.Stylist.Name}", "Details", "Stylists", new { id = Model.StylistId })</h2>
+  <br/>
+  <h3>Contact Information</h3>
+  <h5>@Html.DisplayNameFor(model => model.Phone): @Html.DisplayFor(model => model.Phone)</h5>
+  <h5>@Html.DisplayNameFor(model => model.Email): @Html.DisplayFor(model => model.Email)</h5>
 </div>
 
 <br/>
