@@ -20,7 +20,7 @@ This is a simple website for a fictional hair salon, where a user can add Stylis
 You can find a diagram representing the project's schema below:
 
 <div style="text-align: center">
-  <img src="https://github.com/jfpalchak/HairSalon.Solution/blob/assets/salon-schema-draw.png" />
+  <img src="https://github.com/jfpalchak/HairSalon.Solution/blob/assets/salon-schema.png" />
 </div>
 
 ## Setup/Installation Requirements
