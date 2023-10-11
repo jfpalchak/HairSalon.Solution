@@ -29,7 +29,18 @@ You can find a diagram representing the project's schema below:
 This project assumes you have MySQL Server and MySQL Workbench installed on your system. _If you do not have these tools installed_, follow along with the installation steps for the the necessary tools introduced in the series of lessons found here on [LearnHowToProgram](https://full-time.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql).
 
 #### Set Up the Database
-To set up a new database to run with this application, follow the instructions in this [LearnHowToProgram Lesson](https://full-time.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench). You'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a replicate database in MySQL Workbench with the name `joey_palchak`.
+To run this application, you'll need to import the `joey_palchak.sql` file located at the top level of this repository to create a replicate database in MySQL Workbench with the name `joey_palchak`.
+
+To import the `joey_palchak.sql` file, in MySQL Workbench you must:
+
+1. Navigate to the _Administration_ tab in the _Navigator_ window, and select _Data Import/Restore_.
+2. Under _Import Options_ select _Import from Self-Contained File_. 
+3. Navigate to the `joey_palchak.sql` file located at the top level of the project directory.
+4. Under _Default Schema to be Imported To_, select the _New_ button.
+5. Enter in the name of the project's database: `joey_palchak`
+6. Navigate to the tab called _Import Progress_ and click _Start Import_ at the bottom right corner of the window.
+
+After you've finished the above steps, if you refresh the _Navigator > Scehmas_ tab, the database should now be present.
 
 #### Install and Run the Project
 
